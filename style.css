@@ -11,7 +11,6 @@ body {
 
 img {
     display: inline-box;
-    width: 50px;
 }
 
 ul,
@@ -51,24 +50,42 @@ button {
     background-color: #4392CF;
     color: white;
     padding: 30px;
+}
 
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .sidebar-title h1 {
     font-size: 2rem;
+    display: inline;
+}
+
+
+.sidebar-title img {
+    display: inline;
+    width: 50px;
 }
 
 .sidebar-section {
     display: grid;
-    gap: 10px;
+    gap: 30px;
     font-size: 1.5rem;
+    font-weight: bold;
     grid-auto-rows: min-content;
 }
 
-.sidebar-title * {
-    display: inline;
+.sidebar-section li {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
+.sidebar-section li img {
+    width: 25px;
+}
 
 .nav {
     grid-area: nav;
@@ -89,20 +106,25 @@ button {
 
 .nav-top div *,
 .nav-bottom div * {
-    display: inline-block;
-    padding: 5px;
+    padding: 0;
     margin: 0;
 }
 
-.nav-bottom div button {
-    border: none;
-    border-radius: 30px;
-    padding: 10px 30px;
-    color: white;
+.nav-top div img {
+    width: 2.5rem;
+}
+
+.nav-top-left,
+.nav-top-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-top-right .profile-icon {
+    width: 50px;
     background-color: #4392CF;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 10px;
+    border-radius: 25px;
 }
 
 .search-bar {
@@ -119,6 +141,17 @@ button {
     border: 1px #4392cf solid;
 }
 
+.nav-bottom div button {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #4392CF;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 .nav-bottom-left {
     display: grid;
     grid-template: repeat(2, auto) / repeat(2, auto);
@@ -128,6 +161,18 @@ button {
 
 .nav-bottom-left .profile-icon {
     grid-row: 1 / span 2;
+    width: 100px;
+    background-color: #4392CF;
+    border-radius: 50px;
+}
+
+.user-greeting-top {
+    align-self: end;
+}
+
+.user-greeting-bottom {
+    font-size: 1.25rem;
+    align-self: baseline;
 }
 
 .main {
@@ -163,7 +208,12 @@ button {
 .card-icons {
     display: flex;
     justify-content: right;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-icons img {
+    width: 25px;
 }
 
 .announcements {
@@ -189,7 +239,7 @@ button {
 .trending-card {
     display: grid;
     grid-auto-rows: min-content;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -197,11 +247,25 @@ button {
     display: grid;
     grid-template: auto auto / auto 1fr;
     align-items: center;
-
+    row-gap: 5px;
+    column-gap: 10px;
 }
 
 .trending-icon {
     grid-row: 1 / span 2;
+    width: 50px;
+    background-color: #4392CF;
+    border-radius: 25px;
+}
+
+.trending-username {
+    align-self: end;
+    margin: 0;
+}
+
+.trending-project {
+    align-self: baseline;
+    margin: 0;
 }
 
 .card {
@@ -212,8 +276,7 @@ button {
 }
 
 .card-text *,
-.announcement-item *,
-.trending-item * {
+.announcement-item * {
     margin: 10px 0;
 }
 
